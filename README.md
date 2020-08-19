@@ -61,6 +61,8 @@ gcloud container clusters get-credentials <Project-ID>-gke --region us-central1
 cd wikimedia
 ```
 
+Doker Images: https://hub.docker.com/repository/docker/muralivishnun/wikimedia/tags
+
 2. Run the below commands to deploy Mediawiki with helm
 ```
 helm package wikimedia
@@ -95,5 +97,5 @@ wikimedia-web   *       x.x.x.x        80      70m
 4. MediaWiki Web Page using ExternalIP
 <img src="images/wikimediaweb.PNG" width="700" height="500" style="vertical-align:middle">
 
-5. Application in GCP Logging
+5. Application Log monitoring using GCP Logging
 <img src="images/GKElogsusingstackdriver.PNG" width="700" height="500" style="vertical-align:middle">
