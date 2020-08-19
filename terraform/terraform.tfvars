@@ -1,6 +1,7 @@
-project_id = "vishnuproject-282908"
+project_id = "<Project-ID>"
 region     = "us-central1"
 
+# specify the bastion node range
 master_authorized_network_cidr = "10.128.0.0/20"
 
 node-pool = {
