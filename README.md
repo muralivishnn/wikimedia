@@ -73,7 +73,7 @@ NOTE: Update required values in values.yaml
 
 3. validate the deployments
 ```
-You can access the application at http://{GKE ingress publicip}:30163/wiki
+You can access the application at http://{GKE ingress publicip}:80/wiki
 
 We can get GKE ingress publicip using below command
 
