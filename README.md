@@ -27,6 +27,8 @@ $ gcloud auth application-default login
 
 ### 1. Architecture diagram
 
+<img src="images/MediaWiki_Daigramp.png" width="500" height="500" style="vertical-align:middle">
+
 ### 2 Create GKE cluster using Terraform
 1. Clone the current repo 
 ```
@@ -63,6 +65,8 @@ cd wikimedia
 ```
 helm package wikimedia
 helm install wikimedia-0.1.0.tgz --name wikimedia --namespace demo
+
+NOTE: Update required values in values.yaml
 ```
 
 3. validate the deployments
@@ -75,3 +79,21 @@ $ kubectl get ingress -n demo
 NAME            HOSTS   ADDRESS        PORTS   AGE
 wikimedia-web   *       x.x.x.x        80      70m
 ```
+
+4. We can view the logs of application in GCP Logging.
+
+### SAMPLE OUT PUTS
+1. Deployments Staus in GKE
+<img src="images/deploymentpage.PNG" width="700" height="500" style="vertical-align:middle">
+
+2. Service and Ingress Status
+<img src="images/ingresspage.PNG" width="700" height="500" style="vertical-align:middle">
+
+3. External IP of Ingress
+<img src="images/GKEIngress.PNG" width="400" height="150" style="vertical-align:middle">
+
+4. MediaWiki Web Page using ExternalIP
+<img src="images/wikimediaweb.PNG" width="700" height="500" style="vertical-align:middle">
+
+5. Application in GCP Logging
+<img src="images/GKElogsusingstackdriver.PNG" width="700" height="500" style="vertical-align:middle">
