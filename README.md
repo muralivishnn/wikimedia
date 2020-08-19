@@ -1,5 +1,4 @@
 # wikimedia
-wikimedia project
 
 # Deploying Mediawiki appilication into GKE
 In this project, We are using GKE, Terraform, Docker and helm
