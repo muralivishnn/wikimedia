@@ -21,10 +21,13 @@ $ gcloud auth application-default login
 ```
 
 ### Application depolyement
-1. Create GKE cluster using Terraform
-2. Deploy the wikimedia using Helm
+1. Architecture diagram
+2. Create GKE cluster using Terraform
+3. Deploy the wikimedia using Helm
 
-### Create GKE cluster using Terraform
+###1. Architecture diagram
+
+###2 Create GKE cluster using Terraform
 1. Clone the current repo 
 ```
 git clone https://github.com/muralivishnn/wikimedia.git
@@ -50,3 +53,25 @@ gcloud container clusters get-credentials <Project-ID>-gke --region us-central1
 
 ```
 
+###3. Deploy the wikimedia using Helm
+1. Move into Terraform directory
+```
+cd wikimedia
+```
+
+2. Run the below commands to deploy Mediawiki with helm
+```
+helm package wikimedia
+helm install wikimedia-0.1.0.tgz --name wikimedia --namespace demo
+```
+
+3. validate the deployments
+```
+You can access the application at http://{GKE ingress publicip}:30163/wiki
+
+We can get GKE ingress publicip using below command
+
+$ kubectl get ingress -n demo
+NAME            HOSTS   ADDRESS        PORTS   AGE
+wikimedia-web   *       x.x.x.x        80      70m
+```
