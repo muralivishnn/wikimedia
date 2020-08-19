@@ -25,9 +25,9 @@ $ gcloud auth application-default login
 2. Create GKE cluster using Terraform
 3. Deploy the wikimedia using Helm
 
-###1. Architecture diagram
+### 1. Architecture diagram
 
-###2 Create GKE cluster using Terraform
+### 2 Create GKE cluster using Terraform
 1. Clone the current repo 
 ```
 git clone https://github.com/muralivishnn/wikimedia.git
@@ -53,7 +53,7 @@ gcloud container clusters get-credentials <Project-ID>-gke --region us-central1
 
 ```
 
-###3. Deploy the wikimedia using Helm
+### 3. Deploy the wikimedia using Helm
 1. Move into Terraform directory
 ```
 cd wikimedia
