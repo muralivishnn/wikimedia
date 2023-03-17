@@ -16,8 +16,8 @@ spec:
         app: {{ template "wikimedia.name" . }}
         type: web
     spec:
-      imagePullSecrets:
-      - name: {{ .Values.imagePullSecrets }}
+#       imagePullSecrets:
+#       - name: {{ .Values.imagePullSecrets }}
       containers:
         - name: {{ template "wikimedia.name" . }}
           image: {{ .Values.app.deployment.image.repository }}:{{ .Values.app.deployment.image.tag }}
